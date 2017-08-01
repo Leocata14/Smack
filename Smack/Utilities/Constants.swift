@@ -10,3 +10,5 @@ import Foundation
 
 //Seqgues
 let SEGUE_TO_LOGIN = "toLogin"
+let SEGUE_TO_CREATE_ACCOUNT = "toCreateAccount"
+let SEGUE_UNWIND_TO_CHANNEL = "unwindToChannel"
