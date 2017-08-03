@@ -11,6 +11,7 @@
 		BF087B111F333E6D0039EF53 /* UserDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF087B101F333E6D0039EF53 /* UserDataService.swift */; };
 		BF087B131F334AE90039EF53 /* AvatarPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF087B121F334AE90039EF53 /* AvatarPickerVC.swift */; };
 		BF087B151F334C600039EF53 /* AvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF087B141F334C600039EF53 /* AvatarCell.swift */; };
+		BF087B171F3356CE0039EF53 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF087B161F3356CE0039EF53 /* CircleImage.swift */; };
 		BF23CB291F30A01C0004AB48 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF23CB281F30A01C0004AB48 /* RoundedButton.swift */; };
 		BFDC6B561F3069BD0027507B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDC6B551F3069BD0027507B /* AppDelegate.swift */; };
 		BFDC6B5B1F3069BD0027507B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFDC6B591F3069BD0027507B /* Main.storyboard */; };
@@ -31,6 +32,7 @@
 		BF087B101F333E6D0039EF53 /* UserDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataService.swift; sourceTree = "<group>"; };
 		BF087B121F334AE90039EF53 /* AvatarPickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarPickerVC.swift; sourceTree = "<group>"; };
 		BF087B141F334C600039EF53 /* AvatarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCell.swift; sourceTree = "<group>"; };
+		BF087B161F3356CE0039EF53 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		BF23CB281F30A01C0004AB48 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		BFDC6B521F3069BD0027507B /* Smack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Smack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFDC6B551F3069BD0027507B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				BFDC6B731F3075550027507B /* GradientView.swift */,
 				BF23CB281F30A01C0004AB48 /* RoundedButton.swift */,
 				BF087B141F334C600039EF53 /* AvatarCell.swift */,
+				BF087B161F3356CE0039EF53 /* CircleImage.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 				BFDC6B721F3071700027507B /* ChannelVC.swift in Sources */,
 				BF087B131F334AE90039EF53 /* AvatarPickerVC.swift in Sources */,
 				BF23CB291F30A01C0004AB48 /* RoundedButton.swift in Sources */,
+				BF087B171F3356CE0039EF53 /* CircleImage.swift in Sources */,
 				BFDC6B701F3071600027507B /* ChatVC.swift in Sources */,
 				BF087B111F333E6D0039EF53 /* UserDataService.swift in Sources */,
 				BFDC6B7B1F3082D30027507B /* CreateAccountVC.swift in Sources */,
@@ -449,6 +453,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = H3A77962QT;
 				INFOPLIST_FILE = Smack/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jasonleocata.Smack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -467,6 +472,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = H3A77962QT;
 				INFOPLIST_FILE = Smack/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jasonleocata.Smack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
