@@ -23,6 +23,8 @@ class CreateAccountVC: UIViewController {
         super.viewDidLoad()
 
     }
+    
+    
 
     @IBAction func createAccountButtonTapped(_ sender: Any) {
         guard let email = emailText.text , emailText.text != "" else { return }
@@ -30,7 +32,11 @@ class CreateAccountVC: UIViewController {
         
         AuthService.instance.registerUser(email: email, password: pass) { (success) in
             if success {
-                print("registered user")
+                AuthService.instance.loginUser(email: email, password: pass, completion: { (success) in
+                    if success {
+                        print("Logged in user!",AuthService.instance.userEmail)
+                    }
+                })
             }
         }
     }
