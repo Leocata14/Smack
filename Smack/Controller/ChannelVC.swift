@@ -13,10 +13,22 @@ class ChannelVC: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     @IBAction func prepareForUnwind(segue: UIStoryboardSegue){}
     
+    var statusBarShouldBeHidden = true
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.revealViewController().rearViewRevealWidth = self.view.frame.size.width - 100
-
+        
+        statusBarShouldBeHidden = true
+        setNeedsStatusBarAppearanceUpdate()
+    }
+    
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+    
+    override var preferredStatusBarUpdateAnimation: UIStatusBarAnimation {
+        return .slide
     }
 
     @IBAction func loginButtonTapped(_ sender: Any) {

@@ -12,6 +12,8 @@ class ChatVC: UIViewController {
 
     @IBOutlet weak var menuBtn: UIButton!
     
+    var statusBarShouldBeHidden = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -19,7 +21,18 @@ class ChatVC: UIViewController {
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
         
+        setNeedsStatusBarAppearanceUpdate()
     }
+    
+    override var prefersStatusBarHidden: Bool {
+        return statusBarShouldBeHidden
+    }
+    
+    override var preferredStatusBarUpdateAnimation: UIStatusBarAnimation {
+        return .slide
+    }
+    
+    
 
 
 }
