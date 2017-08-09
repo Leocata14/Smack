@@ -77,7 +77,7 @@
                                 <rect key="frame" x="0.0" y="127" width="375" height="425"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Qdv-ht-uly">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="channelCell" id="Qdv-ht-uly" customClass="ChannelCell" customModule="Smack" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Qdv-ht-uly" id="ecU-LP-Shc">
@@ -97,6 +97,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="channelName" destination="28J-Mc-o1G" id="CRh-n7-ORG"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -134,6 +137,7 @@
                     </view>
                     <connections>
                         <outlet property="loginButton" destination="hrU-xn-9oA" id="0o1-bV-QHo"/>
+                        <outlet property="tableView" destination="PO1-6f-cl6" id="7z3-St-ifI"/>
                         <outlet property="userImage" destination="4vO-Fy-PRL" id="3hP-vh-tu4"/>
                         <segue destination="oZe-lw-TaC" kind="show" identifier="toLogin" id="r33-4I-Fem"/>
                     </connections>
