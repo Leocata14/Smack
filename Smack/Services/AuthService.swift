@@ -110,7 +110,7 @@ class AuthService {
                 guard let data = response.data else { return }
                 let json = JSON(data: data)
                 let id = json["_id"].stringValue
-                let color = json["avatarColour"].stringValue
+                let color = json["avatarColor"].stringValue
                 let avatarName = json["avatarName"].stringValue
                 let email = json["email"].stringValue
                 let name = json["name"].stringValue

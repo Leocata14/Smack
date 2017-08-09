@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13137.5"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -133,6 +134,7 @@
                     </view>
                     <connections>
                         <outlet property="loginButton" destination="hrU-xn-9oA" id="0o1-bV-QHo"/>
+                        <outlet property="userImage" destination="4vO-Fy-PRL" id="3hP-vh-tu4"/>
                         <segue destination="oZe-lw-TaC" kind="show" identifier="toLogin" id="r33-4I-Fem"/>
                     </connections>
                 </viewController>

@@ -13,14 +13,30 @@ class ChannelVC: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     @IBAction func prepareForUnwind(segue: UIStoryboardSegue){}
     
+    @IBOutlet weak var userImage: CircleImage!
     var statusBarShouldBeHidden = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.revealViewController().rearViewRevealWidth = self.view.frame.size.width - 100
         
+        NotificationCenter.default.addObserver(self, selector: #selector(ChannelVC.userDataDidChange(_:)), name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
+        
+        
         statusBarShouldBeHidden = true
         setNeedsStatusBarAppearanceUpdate()
+    }
+    
+    @objc func userDataDidChange(_ notif: Notification) {
+        if AuthService.instance.isLoggedIn {
+            loginButton.setTitle(UserDataService.instance.name, for: .normal)
+            userImage.image = UIImage(named: UserDataService.instance.avatarName)
+            userImage.backgroundColor = UserDataService.instance.returnUIColour(components: UserDataService.instance.avatarColour)
+        } else {
+            loginButton.setTitle("Login", for: .normal)
+            userImage.image = UIImage(named: "menuProfileIcon")
+            userImage.backgroundColor = UIColor.clear
+        }
     }
     
     override var prefersStatusBarHidden: Bool {
